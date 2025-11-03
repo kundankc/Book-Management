@@ -33,9 +33,6 @@ Make sure MongoDB is running on your system or use mongodb atlas get connection 
 # On Linux/Mac
 sudo systemctl start mongodb
 
-# Or using mongod
-mongod
-```
 
 ### 5. Start the server
 
