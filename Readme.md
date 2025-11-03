@@ -1,5 +1,3 @@
-# Book Review System - GraphQL API
-
 ### 1. Clone the repository
 
 ```bash
@@ -29,7 +27,7 @@ ADMIN_USERNAME=admin
 
 ### 4. Start MongoDB
 
-Make sure MongoDB is running on your system:
+Make sure MongoDB is running on your system or use mongodb atlas get connection uri from there:
 
 ```bash
 # On Linux/Mac
@@ -52,7 +50,7 @@ npm start
 
 The server will start at: `http://localhost:4000/api/graphql`
 
-## GraphQL Playground
+### GraphQL Playground
 
 Access the GraphQL Playground at:
 ```
