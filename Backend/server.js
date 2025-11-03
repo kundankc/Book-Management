@@ -6,15 +6,17 @@ const typeDefs = require('./graphql/typeDefs');
 const resolvers = require('./graphql/resolvers');
 const { getUserFromToken } = require('./utils/auth');
 const User = require('./models/User');
+const seedAdmin = require('./seeders/adminSeeder');
 
 const startServer = async () => {
   const app = express();
 
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log('MongoDB connected successfully');
+    console.log('Mongodb connected successfully');
+    await seedAdmin();
   } catch (error) {
-    console.error('MongoDB connection error:', error);
+    console.error('Mongodb connection error:', error);
   }
 
   const server = new ApolloServer({

@@ -154,7 +154,7 @@ const resolvers = {
         const user = await User.findById(context.user.id);
 
         if (user.role !== 'admin' && review.userId.toString() !== context.user.id) {
-          throw new ForbiddenError('You are not authorized to delete this review');
+          throw new ForbiddenError('You are not authorized to delete review');
         }
 
         await Review.findByIdAndDelete(id);
